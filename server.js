@@ -3,6 +3,8 @@ const { app, io, server } = require('./initServer');
 const cors = require('cors');
 const { initialise } = require('./socketEvents');
 
+//Server
+
 app.use(cors());
 app.use(express.json());
 
