@@ -1,6 +1,6 @@
-class GameState {
-    constructor(category, difficulty, host, roomName, questions) {
-        this.roomName = roomName;
+class QuizState {
+    constructor(category, difficulty, host, room, questions) {
+        this.room = room;
         this.category = category;
         this.difficulty = difficulty;
         this.host = host;
@@ -13,8 +13,8 @@ class GameState {
         ];
         this.questionNumber = 1;
         this.questions = questions;
-        this.isGameStarted = false;
+        this.GameStarted = false;
     }
 }
 
-module.exports = { GameState };
+module.exports = { QuizState };

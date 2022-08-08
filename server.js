@@ -8,6 +8,7 @@ const { initialise } = require('./socketEvents');
 app.use(cors());
 app.use(express.json());
 
+// highscore routes for data
 
 app.get('/', (req, res) => {
     res.json('Quiz API')
