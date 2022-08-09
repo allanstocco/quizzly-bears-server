@@ -27,6 +27,10 @@ function initialise(socket) {
     socket.on('send state to players', (state) => {
         io.to(state.room).emit('change state', state);
     })
+
+    socket.on('complete quiz', ({ room, player }) => {
+        io.to(room).emit('update opponent completion', player)
+    })
 }
 
 module.exports = { initialise };
