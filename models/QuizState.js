@@ -8,7 +8,7 @@ class QuizState {
             {
                 name: host,
                 score: 0,
-                hasCompletedQuiz: false
+                completed: false
             }
         ];
         this.questionNumber = 1;
