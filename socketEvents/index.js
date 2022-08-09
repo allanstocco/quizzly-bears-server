@@ -1,4 +1,4 @@
-const { QuizState } = require('../models/GameState')
+const { QuizState } = require('../models/QuizState')
 const { io } = require('../initServer');
 
 function initialise(socket) {
