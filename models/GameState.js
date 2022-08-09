@@ -13,7 +13,7 @@ class QuizState {
         ];
         this.questionNumber = 1;
         this.questions = questions;
-        this.GameStarted = false;
+        this.gameStarted = false;
     }
 }
 
