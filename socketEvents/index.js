@@ -23,6 +23,10 @@ function initialise(socket) {
     socket.on("send_message", (data) => {
         socket.to(data.room).emit("receive_message", data);
       });
+
+    socket.on('send state to players', (state)=>{
+        io.to(state.room).emit('change state', state);
+    })
 }
 
 module.exports = { initialise };
