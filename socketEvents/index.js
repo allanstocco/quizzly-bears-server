@@ -17,7 +17,7 @@ function initialise(socket) {
     socket.on('join game', ({room, username}) => {
         console.log(`User with ID: ${username} joined room: ${room}`);
         socket.join(room);
-        socket.to(room).emit('user joining waiting room', username);
+        socket.to(room).emit('user joining lobby', username);
     })
 
     socket.on("send_message", (data) => {
