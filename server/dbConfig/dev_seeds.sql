@@ -9,4 +9,4 @@ VALUES
     ('username3315', 340),
     ('username331', 210),
     ('username1424', 110),
-    ('username12424', 90);
+    ('lowestscore', 90);

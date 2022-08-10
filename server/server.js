@@ -2,6 +2,8 @@ const express = require('express');
 const { app, io, server } = require('./initServer');
 const cors = require('cors');
 const { initialise } = require('./socketEvents');
+const bodyParser = require("body-parser")
+app.use(bodyParser.json())
 
 //Server
 
