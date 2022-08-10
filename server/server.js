@@ -9,10 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 // highscore routes for data
+const scoreRoutes = require('./routes/highscores')
 
-app.get('/', (req, res) => {
-    res.json('Quiz API')
-});
+app.use('/', scoreRoutes);
 
 io.on("connection", socket => initialise(socket));
 

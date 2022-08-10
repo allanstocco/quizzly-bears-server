@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api:
+    image: 'node:12.18.4'
+    working_dir: /server
+    volumes:
+      - type: bind
+        source: ./server
+        target: /server
+  db:
+    image: 'postgres:11.1'
+    volumes:
+      - "./db/:/docker-entrypoint-initdb.d/:ro"
+    environment:
+      - POSTGRES_DB=futurebook
+      - POSTGRES_USER=futureproof
+      - POSTGRES_PASSWORD=futurebook_password
