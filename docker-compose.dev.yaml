@@ -4,7 +4,7 @@ services:
     build: ./client
     image: debug_client
     ports: 
-      - 8080:8080
+      - 8090:8090
     working_dir: /code
     volumes:
       - type: bind
