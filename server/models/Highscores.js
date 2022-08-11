@@ -26,11 +26,11 @@ class Highscore {
                     let updatedScore = await db.query(`UPDATE highscores SET username = $2, score=$3 WHERE id = $1 RETURNING *;`, [ lowestScore.rows[0].id, username, score ]);
                     let resolveScore = new Highscore(updatedScore.rows[0]);
                     res (resolveScore);
-                } else { 
+                } else {
                     res (lowestScore.rows)
                 }
             } catch (err) {
-                req('Error updating Habit');
+                req('Error updating score');
             }
         });
     }
